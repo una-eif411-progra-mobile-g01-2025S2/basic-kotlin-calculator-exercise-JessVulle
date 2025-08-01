@@ -14,5 +14,4 @@ fun main() {
         println("i = $i")
     }
 
-    println("Pruebass")
 }
