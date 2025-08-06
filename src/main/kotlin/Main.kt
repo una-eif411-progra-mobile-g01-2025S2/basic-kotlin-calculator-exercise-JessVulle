@@ -1,17 +1,31 @@
 package org.example
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+
+fun main() {
+    val calc = Calculadora()
+
+    println(" Ingrese el primer valor:")
+    val numero1 = readln().toDouble()
+
+    println(" Ingrese el segundo valor:")
+    val numero2 = readln().toDouble()
+
+    println(" Seleccione la operación a realizar:")
+    println("1. Sumar")
+    println("2. Restar")
+    println("3. Multiplicar")
+    println("4. Dividir")
+
+    val opcionValida = readln()
+
+    val resultado = when (opcionValida) {
+        "1" -> calc.sumar(numero1, numero2)
+        "2" -> calc.restar(numero1, numero2)
+        "3" -> calc.multiplicar(numero1, numero2)
+        "4" -> calc.dividir(numero1, numero2)
+        else -> " Opción inválida"
     }
-    println("hola")
+
+    println(" Resultado de la operación: $resultado")
 }
