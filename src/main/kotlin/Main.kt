@@ -3,7 +3,7 @@ package org.example
 
 
 fun main() {
-    val calc = Calculadora()
+    val cal = Calculadora()
 
     println(" Ingrese el primer valor:")
     val numero1 = readln().toDouble()
@@ -20,10 +20,10 @@ fun main() {
     val opcionValida = readln()
 
     val resultado = when (opcionValida) {
-        "1" -> calc.sumar(numero1, numero2)
-        "2" -> calc.restar(numero1, numero2)
-        "3" -> calc.multiplicar(numero1, numero2)
-        "4" -> calc.dividir(numero1, numero2)
+        "1" -> cal.sumar(numero1, numero2)
+        "2" -> cal.restar(numero1, numero2)
+        "3" -> cal.multiplicar(numero1, numero2)
+        "4" -> cal.dividir(numero1, numero2)
         else -> " Opción inválida"
     }
 
